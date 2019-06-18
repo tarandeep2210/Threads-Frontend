@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+<button mat-button><mat-icon>menu</mat-icon>&nbsp;<b>Decoder</b></button>
+   
+    <div class="right">
+      <div *ngIf="!loggedIn">
+          <a routerLink="/login">
+            <button mat-button >
+              <b>Login</b>   
+            </button>
+          </a>
+          <a routerLink="/register">
+            <button mat-button>
+                <b>Register</b>
+              </button>
+          </a>
+      </div>
+      <div *ngIf= "loggedIn">
+        <!-- <a routerLink="/login"> -->
+          <button mat-button (click) ="logout()" >
+            <b>Logout</b>   
+          </button>
+        <!-- </a> -->
+    </div>
+  </div>
+  </mat-toolbar>

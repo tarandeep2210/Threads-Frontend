@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <h2 mat-dialog-title>New Thread</h2>
+  <hr>
+  <mat-dialog-content>
+    <form #newthreadForm="ngForm" (ngSubmit)="OnSubmit(newthreadForm)">
+        <mat-form-field class="form-field">
+          <input matInput placeholder="Title" value="" name="title" ngModel>
+        </mat-form-field> 
+        <mat-form-field class="form-field">
+          <textarea matInput placeholder="Description" value="" name="description" ngModel></textarea>  
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <input matInput placeholder="Tags" value="" name="tags" [(ngModel)]="tag">
+          </mat-form-field> 
+        <button mat-raised-button color="primary" (click)="AddTags()" [disabled]="tag===''">Add</button><br> 
+        <button  mat-raised-button title="Click to remove the tag" *ngFor="let tag of tags" >
+          {{tag}}
+         </button>
+         <br>
+         <button mat-raised-button color="primary" type="submit" >Submit</button> 
+         <button mat-raised-button color="primary" (click)="OnClose()" >Close</button>   
+    </form>  
+  </mat-dialog-content>
+</div>

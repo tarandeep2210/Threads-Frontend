@@ -1,0 +1,39 @@
+
+
+.tags_list li{
+
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.tags_list li:hover{
+
+    background-color: lightgray;   
+}
+
+.addNew{
+    position: fixed;
+    bottom: 50px;
+    right:50px;
+    border: 3px solid lightgray;
+    color: lightgray;
+    border-radius: 80px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.addNew:hover{
+    position: fixed;
+    bottom: 50px;
+    right:50px;
+    border: 3px solid lightgray;
+    background-color: lightgray;
+    border-radius: 80px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.mycard{
+    margin: 50px;
+}

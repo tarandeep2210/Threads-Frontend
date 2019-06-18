@@ -1,0 +1,40 @@
+
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-md-2"><h2>Threads</h2></div>
+    <div class="col-md-2 offset-8 text-right">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">
+              
+                  <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>   
+                
+              </span>
+            </div>
+          </div>
+    </div>
+  </div>
+  
+  <hr/>
+  <div class="container" *ngIf="threads.length!=0">
+    <div class="mycard" *ngFor="let thread of threads">
+      <mat-card >
+        <mat-card-title>{{ thread.title }}</mat-card-title>
+        <mat-card-content>{{ thread.description }}</mat-card-content>
+        <mat-card-actions>
+          <ul class="tags_list">
+            <li *ngFor = "let tag of thread.tags">{{tag}}</li>
+          </ul>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    
+  </div>
+  <div class="addNew">
+      <button class="btn" (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>
